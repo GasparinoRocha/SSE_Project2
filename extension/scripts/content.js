@@ -1,3 +1,4 @@
+// Print ingredient list to console
 const ingredientsDiv = document.getElementById('jum-collapsible-0');
 
 if (ingredientsDiv) {
@@ -15,6 +16,7 @@ const breadcrumbTrail = document.getElementsByClassName("breadcrumb-trail").item
 if (breadcrumbTrail) {
   a = document.createElement("DIV");
   const breadcrumbTrailItemList = breadcrumbTrail.childNodes;
+  // Print food groups to console
   console.log("FOOD GROUPS:\n");
   for (i = 0; i < breadcrumbTrailItemList.length; i++) {
     console.log(breadcrumbTrailItemList.item(i).childNodes.item(0).textContent);
@@ -46,4 +48,42 @@ if (breadcrumbTrail) {
   document.body.style = "white-space: pre;"
 }
 
+const url = chrome.runtime.getURL('../data/database.csv');
 
+fetch(url)
+    .then((response) => response.text())
+    .then((text) => doTheThing(text));
+
+function csvToArray(str, delimiter = ",") {
+  // slice from start of text to the first \n index
+  // use split to create an array from string by delimiter
+  const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+
+  // slice from \n index + 1 to the end of the text
+  // use split to create an array of each csv value row
+  const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+  // Map the rows
+  // split values from each row into an array
+  // use headers.reduce to create an object
+  // object properties derived from headers:values
+  // the object passed as an element of the array
+  const arr = rows.map(function (row) {
+    const values = row.split(delimiter);
+    const el = headers.reduce(function (object, header, index) {
+      object[header] = values[index];
+      return object;
+    }, {});
+    return el;
+  });
+
+  // return the array
+  return arr;
+}
+
+function doTheThing(text) {
+  var data = csvToArray(text, ";");
+  for (var i = 0; i < data.length; i++) {
+    console.log("Product " + data[i].Name + " has " + data[i].CO2 + "kg of CO2 equivalent");
+  }
+}
