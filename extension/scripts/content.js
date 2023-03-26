@@ -14,45 +14,65 @@ if (ingredientsDiv) {
 const breadcrumbTrail = document.getElementsByClassName("breadcrumb-trail").item(0);
 
 if (breadcrumbTrail) {
-  a = document.createElement("DIV");
   const breadcrumbTrailItemList = breadcrumbTrail.childNodes;
   // Print food groups to console
   console.log("FOOD GROUPS:\n");
+  let itemNames = []
   for (i = 0; i < breadcrumbTrailItemList.length; i++) {
     console.log(breadcrumbTrailItemList.item(i).childNodes.item(0).textContent);
+    itemNames[i] = stringToArray(breadcrumbTrailItemList.item(i).childNodes.item(0).textContent);
   }
-  const itemCategory = breadcrumbTrailItemList.item(1).childNodes.item(0).textContent.replace(/\s/g, '');
-  a.appendChild(document.createTextNode("Food Group: \n" + itemCategory+"\n\n"));
+  console.log(itemNames);
+  showC02Information(itemNames);
+}
+
+function stringToArray(string){
+  return string.split(/,?\s+/).filter(sanitizeArray);
+}
+
+function sanitizeArray(s){
+  return ((s) && (s != "en") && (isNaN(s)))
+}
+
+function createPopup(name, carbonEmmission){
+  a = document.createElement("DIV");
+  // const itemCategory = breadcrumbTrailItemList.item(1).childNodes.item(0).textContent.replace(/\s/g, '');
+  a.appendChild(document.createTextNode("Food Group: \n" + name +"\n\n"));
 
   // Simple switch statement to check for food groups
-  a.appendChild(document.createTextNode("Total CO2:")) 
-  switch(itemCategory) {
-    case 'Chocolade':
-      a.appendChild(document.createTextNode("3.97"))
-      break;
-    default:
-      console.log(itemCategory)
-      break;
-  }
+  a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission)) 
+  // switch(itemCategory) {
+  //   case 'Chocolade':
+  //     a.appendChild(document.createTextNode("3.97"))
+  //     break;
+  //   default:
+  //     console.log(itemCategory)
+  //     break;
+  // }
 
-  a.style.width = "15%";
-  a.style.height = "10%";
-  a.style.position = "absolute";
-  a.style.top = "10px";
-  a.style.left = "10px";
-  a.style.backgroundColor = "lightblue";
-  a.style.zIndex = 9999999;
-  a.style.font = "italic bold 16px arial,serif";
+  formatPopup(a);
 
   document.body.appendChild(a);
   document.body.style = "white-space: pre;"
 }
 
-const url = chrome.runtime.getURL('../data/database.csv');
+function formatPopup(popup){
+  popup.style.width = "15%";
+  popup.style.height = "10%";
+  popup.style.position = "absolute";
+  popup.style.top = "10px";
+  popup.style.left = "10px";
+  popup.style.backgroundColor = "lightblue";
+  popup.style.zIndex = 9999999;
+  popup.style.font = "italic bold 16px arial,serif";
+}
 
-fetch(url)
-    .then((response) => response.text())
-    .then((text) => doTheThing(text));
+function showC02Information(itemNames){
+  fetch(chrome.runtime.getURL('../data/database_nl.csv'))
+      .then((response) => response.text())
+      .then((text) => findCarbonInfo(csvToArray(text, ";"), itemNames))
+      .then((data) => createPopup(data.name, data.carbon));
+}
 
 function csvToArray(str, delimiter = ",") {
   // slice from start of text to the first \n index
@@ -81,9 +101,26 @@ function csvToArray(str, delimiter = ",") {
   return arr;
 }
 
-function doTheThing(text) {
-  var data = csvToArray(text, ";");
-  for (var i = 0; i < data.length; i++) {
-    console.log("Product " + data[i].Name + " has " + data[i].CO2 + "kg of CO2 equivalent");
+function findCarbonInfo(data, itemNames) { 
+  let ret;
+  console.log("Looking for group: " + itemNames);
+  for (var itemTypeIndex = itemNames.length - 1; itemTypeIndex >= 0; itemTypeIndex--){
+    for (var i in data) {
+      // console.log("Product " + data[i].name + " has " + data[i].carbon + "kg of CO2 equivalent");
+      for(const itemName of itemNames[itemTypeIndex]) {
+        if (data[i].name.includes(itemName)) {
+          console.log("WOOOOO Found it! " + itemName +  " within: " + data[i].name);
+          if (!ret) ret = {
+            'name' : data[i].name, 
+            'carbon' : data[i].carbon
+          };
+        }
+      }
+    }
   }
+  if (ret) return ret;
+  return {
+    'name' : "food group not found", 
+    'carbon' : 0
+  };
 }
