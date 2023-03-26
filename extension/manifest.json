@@ -13,7 +13,7 @@
 
   "web_accessible_resources": [
     {
-      "resources": ["data/database.csv"],
+      "resources": ["data/database.csv", "data/database_nl.csv"],
       "matches": ["https://www.jumbo.com/*"]
     }
   ],
