@@ -1,13 +1,10 @@
 ﻿name;CategoryDSK;Agriculture;iLUC;FoodProcessing;Packaging;Transport;Retail;carbon;CategoryGPC
-Water, kraan, drinken, gemiddelde waarden;Dranken;0;0;0;0;0;0;0;Dranken
-Bier, pils, alc. 4,4 vol.%;Dranken;7;5;24;16;7;1;60;Dranken
-Bier, Deens huishouden, weinig alcohol;Dranken;7;5;24;16;7;1;60;Dranken
-Bier, sterk, alc. 7,6 vol.%;Dranken;7;5;24;16;7;1;60;Dranken
+Plat Water, Bronwater, Mineraalwater, ;Dranken;0;0;0;0;0;0;0;Dranken
+Bier;Dranken;7;5;24;16;7;1;60;Dranken
 Thee;Dranken;250;161;187;194;47;1;841;Dranken
 Koffie, instant, poeder;Dranken;235;154;243;321;58;1;1011;Dranken
-Koffieboon, gebrand, gemalen;Dranken;130;84;21;24;58;1;318;Dranken
-Cacao, instant, zonder melk, poeder;Dranken;275;284;-552;432;58;1;498;Dranken
-Cacaopoeder;Dranken;275;284;-552;432;58;1;498;Dranken
+Koffiebonen, gebrand, gemalen;Dranken;130;84;21;24;58;1;318;Dranken
+Cacao;Dranken;275;284;-552;432;58;1;498;Dranken
 Vruchtensap, gemengd, gezoet, geconcentreerd;Dranken;80;-1;28;31;119;1;258;Dranken
 Vlierbes, sap, geconcentreerd, suiker toegevoegd;Dranken;117;26;28;31;38;1;240;Dranken
 Sinaasappelsap, ingeblikt;Dranken;22;3;9;31;67;1;132;Dranken
@@ -17,14 +14,11 @@ Appelsap, ingeblikt of gebotteld;Dranken;32;2;61;31;37;1;164;Dranken
 Sherry, droog;Dranken;49;3;258;37;79;1;427;Dranken
 Likeur, koffie met slagroom;Dranken;71;10;163;37;57;1;339;Dranken
 BITTER, Gammel Dansk Bitter Dram;Dranken;110;-5;-11;37;72;1;204;Dranken
-Brandewijn, cognac;Dranken;99;-2;480;37;207;1;822;Dranken
+Cognac, Brandy;Dranken;99;-2;480;37;207;1;822;Dranken
 Wodka;Dranken;110;-5;-11;37;72;1;204;Dranken
 Aquavit, 40 % vol., gemiddelde waarden;Dranken;110;-5;-11;37;72;1;204;Dranken
 Tomatensap, ingeblikt;Dranken;13;2;20;22;68;1;126;Dranken
-Wijn, wit, gemiddelde waarden;Dranken;31;7;40;41;68;1;187;Dranken
-Wijn, rosé;Dranken;31;7;40;41;68;1;187;Dranken
-Wijn rood;Dranken;31;7;40;41;68;1;187;Dranken
-Wijn, wit, mousserend, champagne;Dranken;31;7;40;41;68;1;187;Dranken
+Wijn, gemiddelde waarden;Dranken;31;7;40;41;68;1;187;Dranken
 IJsthee, perzik;Dranken;20;2;37;13;8;1;82;Dranken
 Energiedrank;Dranken;14;0;17;16;6;1;53;Dranken
 Alcoholische frisdrank, 4%;Dranken;25;0;21;19;7;1;72;Dranken
@@ -40,8 +34,7 @@ Wafelstokjes;Brood/bakkerijproducten;138;11;21;22;16;1;210;Brood/bakkerijproduct
 Paneermeel;Brood/bakkerijproducten;58;7;42;4;14;1;126;Brood/bakkerijproducten
 Knäckebröd, knackebrot, rogge, grof;Brood/bakkerijproducten;41;5;42;4;14;1;108;Brood/bakkerijproducten
 Tarwebrood, om te roosteren, industrieel geproduceerd;Brood/bakkerijproducten;38;4;16;4;10;1;74;Brood/bakkerijproducten
-Brood, wit, voor worstjes;Brood/bakkerijproducten;38;4;16;4;10;1;74;Brood/bakkerijproducten
-Brood, wit, broodje, grove korrel;Brood/bakkerijproducten;38;4;16;4;10;1;74;Brood/bakkerijproducten
+Brood, wits;Brood/bakkerijproducten;38;4;16;4;10;1;74;Brood/bakkerijproducten
 Roggebrood, donker, volle granen, industrieel geproduceerd;Brood/bakkerijproducten;27;3;17;4;9;1;62;Brood/bakkerijproducten
 Roggebroodkruimels met bruine suiker, gemiddelde waarden;Brood/bakkerijproducten;83;-1;55;4;14;1;156;Brood/bakkerijproducten
 Gewone cake, chocoladetaart;Brood/bakkerijproducten;57;12;92;41;13;0;215;Brood/bakkerijproducten
@@ -49,16 +42,12 @@ Deens gebak, kanelsnegl;Brood/bakkerijproducten;47;10;104;4;11;1;177;Brood/bakke
 Gewone cake, gemiddelde waarden;Brood/bakkerijproducten;57;12;92;41;13;0;215;Brood/bakkerijproducten
 Roomgebak, laagcake;Brood/bakkerijproducten;57;12;92;41;13;0;215;Brood/bakkerijproducten
 Koekje, truffelproduct / ongebakken, industrieel geproduceerd;Brood/bakkerijproducten;70;38;96;47;11;1;263;Brood/bakkerijproducten
-Pizza met tomaat en kaas, kant-en-klaarmaaltijden;Brood/bakkerijproducten;98;20;148;21;10;0;296;Brood/bakkerijproducten
-Pizza met zeevruchten, tomaat en kaas, kant-en-klaarmaaltijden;Brood/bakkerijproducten;71;47;227;21;13;0;379;Brood/bakkerijproducten
-Pizza met salami, tomaat en kaas, kant-en-klaarmaaltijden;Brood/bakkerijproducten;103;25;156;21;10;0;315;Brood/bakkerijproducten
+Pizza met tomaat en kaas;Brood/bakkerijproducten;98;20;148;21;10;0;296;Brood/bakkerijproducten
+Pizza met zeevruchten, tomaat en kaas;Brood/bakkerijproducten;71;47;227;21;13;0;379;Brood/bakkerijproducten
+Pizza met salami, tomaat en kaas;Brood/bakkerijproducten;103;25;156;21;10;0;315;Brood/bakkerijproducten
 Pizza met groente, fruit, tomaat en kaas, kant en klare maaltijden;Brood/bakkerijproducten;52;16;148;21;19;0;256;Brood/bakkerijproducten
-Pizza met vlees, tomaat en kaas, kant-en-klaarmaaltijden;Brood/bakkerijproducten;191;46;118;21;14;0;391;Brood/bakkerijproducten
-Pizza met vlees en zeevruchten, tomaat en kaas, kant-en-klaarmaaltijden;Brood/bakkerijproducten;131;46;173;21;14;0;385;Brood/bakkerijproducten
-Pizza Romana, diepvries, kant-en-klaarmaaltijden;Brood/bakkerijproducten;113;24;115;21;12;3;287;Brood/bakkerijproducten
-Pizza Napolitana, diepvries, kant-en-klaarmaaltijden;Brood/bakkerijproducten;98;20;148;21;10;3;299;Brood/bakkerijproducten
-Pizza met broccoli, diepvries, kant-en-klaarmaaltijden;Brood/bakkerijproducten;52;16;148;21;19;3;258;Brood/bakkerijproducten
-Pizza met tonijn, diepvries, kant-en-klaarmaaltijden;Brood/bakkerijproducten;47;26;209;21;21;3;326;Brood/bakkerijproducten
+Pizza met vlees, tomaat en kaas;Brood/bakkerijproducten;191;46;118;21;14;0;391;Brood/bakkerijproducten
+Pizza met vlees en zeevruchten, tomaat en kaas;Brood/bakkerijproducten;131;46;173;21;14;0;385;Brood/bakkerijproducten
 Noga;Brood/bakkerijproducten;207;49;162;67;11;1;497;Brood/bakkerijproducten
 Gist, bakkers, samengeperst;Brood/bakkerijproducten;0;26;92;20;7;0;145;Brood/bakkerijproducten
 pizza deeg;Brood/bakkerijproducten;31;2;5;26;9;0;72;Brood/bakkerijproducten
@@ -113,7 +102,6 @@ Cashewnoten, droog geroosterd;Fruit/groente producten;220;261;-160;26;54;1;401;V
 Pompoenpitten, gedroogd;Fruit/groente producten;179;55;49;26;11;1;320;Vruchten/groenten/noten/zaden bereid/verwerkt
 Bloemkool, diepvries;Fruit/groente producten;18;5;2;6;50;3;84;Vruchten/groenten/noten/zaden bereid/verwerkt
 Spinazie, gehakt, diepvries;Fruit/groente producten;15;4;2;6;35;3;64;Vruchten/groenten/noten/zaden bereid/verwerkt
-Broccoli, diepvries;Fruit/groente producten;18;5;2;6;50;3;84;Vruchten/groenten/noten/zaden bereid/verwerkt
 Taugé, mung, rauw;Fruit/groente producten;20;4;0;14;65;1;104;Vruchten/groenten/noten/zaden bereid/verwerkt
 Taugé, gemiddelde waarden, rauw;Fruit/groente producten;20;4;0;14;65;1;104;Vruchten/groenten/noten/zaden bereid/verwerkt
 Appel, rauw, alle soorten;Fruit/groente producten;18;2;0;14;31;1;66;Vruchten/groenten/noten/zaden bereid/verwerkt
@@ -147,8 +135,8 @@ Aardappelmeel;Fruit/groente producten;77;7;14;20;12;1;131;Vruchten/groenten/note
 Erwten, groen, ingeblikt;Fruit/groente producten;58;18;20;22;17;1;136;Vruchten/groenten/noten/zaden bereid/verwerkt
 Aardappelgratin / roomaardappelen;Fruit/groente producten;30;6;36;26;13;0;110;Vruchten/groenten/noten/zaden bereid/verwerkt
 Salsa, heet;Fruit/groente producten;13;2;28;64;51;1;159;Vruchten/groenten/noten/zaden bereid/verwerkt
-Pizza saus;Fruit/groente producten;24;4;116;78;11;1;233;Vruchten/groenten/noten/zaden bereid/verwerkt
-Pasta saus;Fruit/groente producten;24;4;116;78;11;1;233;Vruchten/groenten/noten/zaden bereid/verwerkt
+Pizza-saus;Fruit/groente producten;24;4;116;78;11;1;233;Vruchten/groenten/noten/zaden bereid/verwerkt
+Pasta-saus;Fruit/groente producten;24;4;116;78;11;1;233;Vruchten/groenten/noten/zaden bereid/verwerkt
 Kokosmelk;Fruit/groente producten;189;73;24;22;40;1;350;Vruchten/groenten/noten/zaden bereid/verwerkt
 Gesneden champignons;Fruit/groente producten;2;1;0;14;24;0;41;Vruchten/groenten/noten/zaden bereid/verwerkt
 Magnetronpopcorn;Fruit/groente producten;16;15;94;26;10;1;162;Vruchten/groenten/noten/zaden bereid/verwerkt
@@ -204,11 +192,11 @@ Mandarijn, rauw;Vruchten;8;2;0;14;71;1;97;Fruit - onbereid/onbewerkt (vers)
 Kiwi's, rauw;Vruchten;16;3;0;14;59;1;93;Fruit - onbereid/onbewerkt (vers)
 Rundvlees, bovenzijde, dop eraf, rauw;Vlees/gevogelte;3965;768;-241;14;63;0;4569;Vlees/gevogelte/andere dieren
 Rundvlees, filet, ontvet, rauw;Vlees/gevogelte;13345;2585;-811;14;63;0;15195;Vlees/gevogelte/andere dieren
-Rundvlees, gehakt, 10-15% vet, rauw;Vlees/gevogelte;2858;546;-178;14;12;0;3251;Vlees/gevogelte/andere dieren
 Rundvlees, rump, rauw;Vlees/gevogelte;3965;768;-241;14;63;0;4569;Vlees/gevogelte/andere dieren
-Rundvlees, gehakt, 15-20% vet, rauw;Vlees/gevogelte;2690;516;-147;14;12;0;3084;Vlees/gevogelte/andere dieren
+Rundergehakt, 15-20% vet, rauw;Vlees/gevogelte;2690;516;-147;14;12;0;3084;Vlees/gevogelte/andere dieren
+Rundergehakt, 10-15% vet, rauw;Vlees/gevogelte;2858;546;-178;14;12;0;3251;Vlees/gevogelte/andere dieren
+Rundergehakt, 5-10% vet, rauw;Vlees/gevogelte;3026;575;-209;14;12;0;3419;Vlees/gevogelte/andere dieren
 Rundvlees, T-bone steak, rauw;Vlees/gevogelte;7072;1370;-430;14;63;0;8089;Vlees/gevogelte/andere dieren
-Rundvlees, gehakt, 5-10% vet, rauw;Vlees/gevogelte;3026;575;-209;14;12;0;3419;Vlees/gevogelte/andere dieren
 Spek, braden, rauw;Vlees/gevogelte;389;68;-30;14;39;0;480;Vlees/gevogelte/andere dieren
 Worst, salami;Vlees/gevogelte;268;60;160;2;15;1;506;Vlees/gevogelte/andere dieren
 Varkensvlees, ham, gekookt, gesneden;Vlees/gevogelte;250;43;32;2;10;0;338;Vlees/gevogelte/andere dieren
@@ -220,7 +208,7 @@ Varkensworst, Thüringer braadworst;Vlees/gevogelte;114;20;37;2;9;0;181;Vlees/ge
 Kip, borst, gekookt, gesneden;Vlees/gevogelte;233;62;17;2;10;0;325;Vlees/gevogelte/andere dieren
 Kip, poot, vlees en vel, rauw;Vlees/gevogelte;93;25;-3;14;10;0;139;Vlees/gevogelte/andere dieren
 Kip, drumstick, vlees en vel, rauw;Vlees/gevogelte;88;24;-3;14;10;0;132;Vlees/gevogelte/andere dieren
-Kip, borst, vlees en vel, rauw;Vlees/gevogelte;259;69;-9;14;11;0;344;Vlees/gevogelte/andere dieren
+Kip, borst, vlees en vel, kipfilet, rauw;Vlees/gevogelte;259;69;-9;14;11;0;344;Vlees/gevogelte/andere dieren
 Kippen worst;Vlees/gevogelte;83;21;28;2;9;0;144;Vlees/gevogelte/andere dieren
 Kip, kip, vlees en vel, rauw;Vlees/gevogelte;160;43;-6;14;11;0;222;Vlees/gevogelte/andere dieren
 Lamsvlees, flank, gekruid, gekookt;Vlees/gevogelte;2272;589;-399;2;10;0;2475;Vlees/gevogelte/andere dieren
@@ -241,11 +229,11 @@ Varkensvlees, ossenhaas, getrimd, rauw;Vlees/gevogelte;445;77;-35;14;39;0;540;Vl
 Varkensvlees, gehakt, 5-10% vet, rauw;Vlees/gevogelte;250;39;-25;14;12;0;290;Vlees/gevogelte/andere dieren
 Varkensvlees, kraag, ontvet, rauw;Vlees/gevogelte;322;50;-41;14;12;0;357;Vlees/gevogelte/andere dieren
 Varkensvlees, gehakt, 15-20% vet, rauw;Vlees/gevogelte;222;39;-17;14;39;0;297;Vlees/gevogelte/andere dieren
-Gehakt, type spaghettisaus, gemiddelde waarden, kant-en-klaarmaaltijden;Vlees/gevogelte;1105;219;-25;64;10;0;1374;Vlees/gevogelte/andere dieren
-Schildpad, nep, gemiddelde waarden, kant-en-klaarmaaltijden;Vlees/gevogelte;1490;294;-10;63;10;1;1849;Vlees/gevogelte/andere dieren
-Varkensvlees in kerriesaus, diepvries, kant-en-klaarmaaltijden;Vlees/gevogelte;234;46;14;64;21;3;382;Vlees/gevogelte/andere dieren
-Lever, varken, in roomsaus, diepvries, kant-en-klaarmaaltijden;Vlees/gevogelte;89;28;95;64;11;3;290;Vlees/gevogelte/andere dieren
-Varkensvlees, gehakt en gebonden met bloem en ei, gekookt, diepvries, kant-en-klaarmaaltijden;Vlees/gevogelte;92;19;19;64;11;3;208;Vlees/gevogelte/andere dieren
+Gehakt, type spaghettisaus, gemiddelde waarden;Vlees/gevogelte;1105;219;-25;64;10;0;1374;Vlees/gevogelte/andere dieren
+Schildpad, nep, gemiddelde waarden;Vlees/gevogelte;1490;294;-10;63;10;1;1849;Vlees/gevogelte/andere dieren
+Varkensvlees in kerriesaus, diepvries;Vlees/gevogelte;234;46;14;64;21;3;382;Vlees/gevogelte/andere dieren
+Lever, varken, in roomsaus, diepvries;Vlees/gevogelte;89;28;95;64;11;3;290;Vlees/gevogelte/andere dieren
+Varkensvlees, gehakt en gebonden met bloem en ei, gekookt, diepvries;Vlees/gevogelte;92;19;19;64;11;3;208;Vlees/gevogelte/andere dieren
 Lam, poot, niet gespecificeerd, rauw;Vlees/gevogelte;2535;658;-512;14;48;0;2743;Vlees/gevogelte/andere dieren
 Lamsvlees, vlees, gemiddelde waarden, rauw;Vlees/gevogelte;2535;658;-512;14;48;0;2743;Vlees/gevogelte/andere dieren
 Kalkoen, borst, gekookt/gerookt, gesneden;Vlees/gevogelte;216;54;19;2;10;0;302;Vlees/gevogelte/andere dieren
@@ -300,8 +288,7 @@ Olijfolie;Oliën/vetten eetbaar;181;64;1;56;79;1;383;Oliën/vetten eetbaar
 Olie, raapzaad (geen erucazuur);Oliën/vetten eetbaar;246;47;33;56;0;1;384;Oliën/vetten eetbaar
 magarine;Oliën/vetten eetbaar;0;32;231;24;5;0;293;Oliën/vetten eetbaar
 Honing;Bereid/geconserveerd voedsel;14;1;15;41;6;1;77;Bereid/geconserveerd voedsel
-IJs, zuivel, (op basis van volle melk);Bereid/geconserveerd voedsel;77;20;123;51;11;3;284;Bereid/geconserveerd voedsel
-IJs, zuivel (op basis van room);Bereid/geconserveerd voedsel;77;20;123;51;11;3;284;Bereid/geconserveerd voedsel
+IJs, zuivel;Bereid/geconserveerd voedsel;77;20;123;51;11;3;284;Bereid/geconserveerd voedsel
 IJs, ijslolly, limonade;Bereid/geconserveerd voedsel;26;1;28;51;7;3;115;Bereid/geconserveerd voedsel
 Gehaktballetjes, ingeblikt;Bereid/geconserveerd voedsel;907;174;-16;63;12;1;1142;Bereid/geconserveerd voedsel
 Dumplings, gemiddelde waarden;Bereid/geconserveerd voedsel;24;8;60;26;9;0;127;Bereid/geconserveerd voedsel
@@ -309,40 +296,39 @@ Gehaktballetjes, diepvries;Bereid/geconserveerd voedsel;907;174;-14;26;12;3;1108
 Soep, tomaat, klaar om te eten;Bereid/geconserveerd voedsel;63;5;82;22;11;1;184;Bereid/geconserveerd voedsel
 Knoedels, bevroren;Bereid/geconserveerd voedsel;24;8;62;26;9;3;131;Bereid/geconserveerd voedsel
 Kip, gegrild, fastfood;Bereid/geconserveerd voedsel;176;49;7;118;12;0;361;Bereid/geconserveerd voedsel
-Kipnuggets, gefrituurd, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;167;43;74;26;11;3;324;Bereid/geconserveerd voedsel
+Kipnuggets, gefrituurd;Bereid/geconserveerd voedsel;167;43;74;26;11;3;324;Bereid/geconserveerd voedsel
 Pasta, rauw;Bereid/geconserveerd voedsel;52;4;25;23;68;1;173;Bereid/geconserveerd voedsel
-Loempia, diepvries, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;22;11;90;64;11;0;199;Bereid/geconserveerd voedsel
-Loempia, gefrituurd, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;22;11;90;64;11;0;199;Bereid/geconserveerd voedsel
+Loempia ;Bereid/geconserveerd voedsel;22;11;90;64;11;0;199;Bereid/geconserveerd voedsel
 Pop corn, olie en zout toegevoegd, traditioneel;Bereid/geconserveerd voedsel;18;12;57;26;11;1;125;Bereid/geconserveerd voedsel
 Pindakaas;Bereid/geconserveerd voedsel;49;43;139;42;11;1;285;Bereid/geconserveerd voedsel
 Aardappelchips, grof;Bereid/geconserveerd voedsel;59;16;303;26;12;1;417;Bereid/geconserveerd voedsel
 Tofu, sojaboon curd;Bereid/geconserveerd voedsel;18;11;91;26;25;0;171;Bereid/geconserveerd voedsel
 Chips;Bereid/geconserveerd voedsel;59;16;303;26;12;1;417;Bereid/geconserveerd voedsel
-Lasagne, rundvlees, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;668;131;1;64;21;0;885;Bereid/geconserveerd voedsel
-Lasagne, vegetarisch, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;46;10;30;64;24;0;174;Bereid/geconserveerd voedsel
-Daal, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;40;16;42;64;22;0;185;Bereid/geconserveerd voedsel
-Sushi, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;19;26;124;64;18;0;251;Bereid/geconserveerd voedsel
+Lasagne, rundvlees;Bereid/geconserveerd voedsel;668;131;1;64;21;0;885;Bereid/geconserveerd voedsel
+Lasagne, vegetarisch;Bereid/geconserveerd voedsel;46;10;30;64;24;0;174;Bereid/geconserveerd voedsel
+Daal;Bereid/geconserveerd voedsel;40;16;42;64;22;0;185;Bereid/geconserveerd voedsel
+Sushi;Bereid/geconserveerd voedsel;19;26;124;64;18;0;251;Bereid/geconserveerd voedsel
 Verse pasta, fettucine-spinazie;Bereid/geconserveerd voedsel;44;5;22;23;14;0;108;Bereid/geconserveerd voedsel
 Eier salade;Bereid/geconserveerd voedsel;36;17;62;24;11;0;151;Bereid/geconserveerd voedsel
-Lasagne, veganistisch, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;30;9;31;64;24;0;159;Bereid/geconserveerd voedsel
-Pannenkoeken, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;75;16;50;67;13;1;221;Bereid/geconserveerd voedsel
+Lasagne, veganistisch;Bereid/geconserveerd voedsel;30;9;31;64;24;0;159;Bereid/geconserveerd voedsel
+Pannenkoeken;Bereid/geconserveerd voedsel;75;16;50;67;13;1;221;Bereid/geconserveerd voedsel
 Knoflookbaguette, diepvries;Bereid/geconserveerd voedsel;33;9;59;4;10;3;118;Bereid/geconserveerd voedsel
 Kop noedels kip;Bereid/geconserveerd voedsel;53;5;91;26;11;1;187;Bereid/geconserveerd voedsel
 Thaise maaltijd panang kerrie kip;Bereid/geconserveerd voedsel;96;36;18;64;18;0;233;Bereid/geconserveerd voedsel
 Tortillachips, kaas;Bereid/geconserveerd voedsel;34;7;110;26;11;1;190;Bereid/geconserveerd voedsel
 Rucolasalade, afgespoeld;Bereid/geconserveerd voedsel;13;3;0;26;5;0;48;Bereid/geconserveerd voedsel
 Gevulde verse pasta;Bereid/geconserveerd voedsel;76;11;93;23;11;0;214;Bereid/geconserveerd voedsel
-Aardappelstamppot, rundvlees, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;1042;204;37;26;8;3;1321;Bereid/geconserveerd voedsel
-Aardappelstamppot, gemengd vlees, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;609;123;170;26;11;3;942;Bereid/geconserveerd voedsel
-Loempia's, groenten, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;22;11;90;64;11;0;199;Bereid/geconserveerd voedsel
-Loempia's, kip, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;47;15;85;64;11;3;224;Bereid/geconserveerd voedsel
-Loempia's, rundvlees, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;216;45;73;64;12;3;414;Bereid/geconserveerd voedsel
-Gehaktballetjes in kerrie met rijst en kerriesaus, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;59;18;35;64;14;3;194;Bereid/geconserveerd voedsel
-Preipastei met spek, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;56;13;43;21;11;3;146;Bereid/geconserveerd voedsel
-Croque monsieur, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;131;13;6;26;11;0;187;Bereid/geconserveerd voedsel
+Aardappelstamppot, rundvlees;Bereid/geconserveerd voedsel;1042;204;37;26;8;3;1321;Bereid/geconserveerd voedsel
+Aardappelstamppot, gemengd vlees;Bereid/geconserveerd voedsel;609;123;170;26;11;3;942;Bereid/geconserveerd voedsel
+Loempia's, groenten;Bereid/geconserveerd voedsel;22;11;90;64;11;0;199;Bereid/geconserveerd voedsel
+Loempia's, kip;Bereid/geconserveerd voedsel;47;15;85;64;11;3;224;Bereid/geconserveerd voedsel
+Loempia's, rundvlees;Bereid/geconserveerd voedsel;216;45;73;64;12;3;414;Bereid/geconserveerd voedsel
+Gehaktballetjes in kerrie met rijst en kerriesaus;Bereid/geconserveerd voedsel;59;18;35;64;14;3;194;Bereid/geconserveerd voedsel
+Preipastei met spek;Bereid/geconserveerd voedsel;56;13;43;21;11;3;146;Bereid/geconserveerd voedsel
+Croque monsieur;Bereid/geconserveerd voedsel;131;13;6;26;11;0;187;Bereid/geconserveerd voedsel
 Chili kaas topjes;Bereid/geconserveerd voedsel;132;10;4;24;15;3;187;Bereid/geconserveerd voedsel
 Mozarella-sticks;Bereid/geconserveerd voedsel;267;15;-37;35;11;0;292;Bereid/geconserveerd voedsel
-Chili con carne, kant-en-klaarmaaltijden;Bereid/geconserveerd voedsel;1696;331;-66;118;27;0;2107;Bereid/geconserveerd voedsel
+Chili con carne;Bereid/geconserveerd voedsel;1696;331;-66;118;27;0;2107;Bereid/geconserveerd voedsel
 Vegan balletjes, op basis van soja;Bereid/geconserveerd voedsel;2;20;28;26;7;3;86;Bereid/geconserveerd voedsel
 Vegan schnitzels, op basis van soja;Bereid/geconserveerd voedsel;10;23;109;26;7;3;178;Bereid/geconserveerd voedsel
 Veganistische burgers, op basis van soja;Bereid/geconserveerd voedsel;4;19;26;26;7;3;85;Bereid/geconserveerd voedsel
@@ -373,7 +359,6 @@ Kabeljauw, lever, gerookt;Zeevruchten;0;129;1091;14;19;0;1254;Zeevruchten
 Kabeljauw, lever, rauw;Zeevruchten;0;103;864;14;11;0;992;Zeevruchten
 Kreeft, ingeblikt;Zeevruchten;0;173;636;156;19;1;985;Zeevruchten
 Mosselen, in water, ingeblikt;Zeevruchten;0;1;8;156;11;1;177;Zeevruchten
-Tonijn, in tomatensaus, ingeblikt;Zeevruchten;15;72;698;118;11;1;915;Zeevruchten
 Kabeljauw, ree, rauw;Zeevruchten;0;105;864;147;11;0;1127;Zeevruchten
 Krabscharen, vlees, rauw;Zeevruchten;0;188;1253;8;19;0;1468;Zeevruchten
 Kaviaar, gemaakt van loddekuit;Zeevruchten;0;105;869;147;11;0;1132;Zeevruchten
@@ -432,10 +417,10 @@ Mosterd, geel, kant en klaar;Kruiderijen/conserveringsmiddelen/extracten;20;12;4
 kerrie poeder;Kruiderijen/conserveringsmiddelen/extracten;146;35;5;272;11;1;470;Kruiderijen/conserveringsmiddelen/extracten
 Tomatenketchup, gebotteld;Kruiderijen/conserveringsmiddelen/extracten;42;4;102;42;11;1;201;Kruiderijen/conserveringsmiddelen/extracten
 Soja saus;Kruiderijen/conserveringsmiddelen/extracten;20;-1;27;85;18;1;149;Kruiderijen/conserveringsmiddelen/extracten
-Saus, barbecue;Kruiderijen/conserveringsmiddelen/extracten;51;4;110;42;10;1;218;Kruiderijen/conserveringsmiddelen/extracten
+BBQ-saus;Kruiderijen/conserveringsmiddelen/extracten;51;4;110;42;10;1;218;Kruiderijen/conserveringsmiddelen/extracten
 Pesto;Kruiderijen/conserveringsmiddelen/extracten;63;78;138;64;39;1;383;Kruiderijen/conserveringsmiddelen/extracten
 Tonijnsalade;Kruiderijen/conserveringsmiddelen/extracten;7;42;364;24;12;0;450;Kruiderijen/conserveringsmiddelen/extracten
-Humus, klaar;Kruiderijen/conserveringsmiddelen/extracten;53;29;16;24;28;0;150;Kruiderijen/conserveringsmiddelen/extracten
+Humus, Houmous, klaar;Kruiderijen/conserveringsmiddelen/extracten;53;29;16;24;28;0;150;Kruiderijen/conserveringsmiddelen/extracten
 Tahin, sesampasta;Kruiderijen/conserveringsmiddelen/extracten;157;111;64;64;11;1;408;Kruiderijen/conserveringsmiddelen/extracten
 Ajvar, genieten;Kruiderijen/conserveringsmiddelen/extracten;55;15;33;64;81;1;249;Kruiderijen/conserveringsmiddelen/extracten
 Mangochutney;Kruiderijen/conserveringsmiddelen/extracten;87;4;71;64;62;1;290;Kruiderijen/conserveringsmiddelen/extracten
@@ -445,7 +430,7 @@ Chilisaus;Kruiderijen/conserveringsmiddelen/extracten;48;0;38;64;31;1;182;Kruide
 Basilicum, gedroogd;Kruiderijen/conserveringsmiddelen/extracten;91;13;0;272;68;1;444;Kruiderijen/conserveringsmiddelen/extracten
 Linzen, gekiemd, rauw;Groenten;85;32;0;14;39;1;170;Groenten
 Peper, zoet, rood, rauw;Groenten;25;3;0;14;58;1;102;Groenten
-Tomaat, rijp, rauw, herkomst onbekend;Groenten;7;1;0;14;48;1;70;Groenten
+Tomaten, rijp, rauw, herkomst onbekend;Groenten;7;1;0;14;48;1;70;Groenten
 Pompoen, rauw;Groenten;14;4;0;6;58;1;83;Groenten
 Aubergine, rauw;Groenten;16;2;0;14;65;1;97;Groenten
 Tomaat, gedroogd;Groenten;91;9;0;26;68;1;195;Groenten

@@ -8,11 +8,59 @@ if (ingredientsDiv) {
     console.log(ingredientList.childNodes[i].childNodes[0]);
   }
 }
+addItemEvaluator()
+function addItemEvaluator() {
+  let dataDiv = document.createElement("DIV");
 
+  formatPopup(dataDiv, "500px");
+  appendRandomPageFunction(dataDiv);
+  appendRandomItemFunction(dataDiv);
+  document.body.appendChild(dataDiv);
+
+  function goToRandomItem() {
+    const itemOptions = document.getElementsByClassName("image-container");
+    const itemOption = itemOptions.item(getRandomInt(0, itemOptions.length));
+    if (itemOption) {
+      const randomItem = itemOption.childNodes[0];
+      console.log(randomItem);
+      console.log("Link -> " + randomItem.href);
+      window.location.href = randomItem.href;
+    } else {
+      console.log("Error Can not find.")
+    }
+  }
+
+  function goToRandomPage() {
+    let newPage = getRandomInt(0, 778) * 24;
+    window.location.href = "https://www.jumbo.com/producten/?offSet=" + newPage;
+  }
+
+  function appendRandomItemFunction(parentDiv) {
+    var x = document.createElement("BUTTON");
+    var t = document.createTextNode("Random Item");
+    x.appendChild(t);
+    x.addEventListener("click", goToRandomItem);
+    parentDiv.appendChild(x);
+  }
+
+  function appendRandomPageFunction(parentDiv) {
+    var x = document.createElement("BUTTON");
+    var t = document.createTextNode("Random Page");
+    x.appendChild(t);
+    x.addEventListener("click", goToRandomPage);
+    parentDiv.appendChild(x);
+  }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min)
+  }
+}
 // Create div item to display label
 
 const breadcrumbTrail = document.getElementsByClassName("breadcrumb-trail").item(0);
-
+ 
 if (breadcrumbTrail) {
   const breadcrumbTrailItemList = breadcrumbTrail.childNodes;
   // Print food groups to console
@@ -31,47 +79,56 @@ function stringToArray(string){
 }
 
 function sanitizeArray(s){
-  return ((s) && (s != "en") && (isNaN(s)))
+  s = s.toLowerCase();
+  const forbiddenWords = ["rode", "saus", "ster", "groen", "water", "voor", "alle", "droog"]
+  return ((s) && (s.length > 3) && (isNaN(s)) && !forbiddenWords.includes(s)) 
 }
+// && (s != "las") && (s != "met")
 
-function createPopup(name, carbonEmmission){
+function createPopup(name, carbonEmmission, info){
   a = document.createElement("DIV");
   // const itemCategory = breadcrumbTrailItemList.item(1).childNodes.item(0).textContent.replace(/\s/g, '');
   a.appendChild(document.createTextNode("Food Group: \n" + name +"\n\n"));
 
   // Simple switch statement to check for food groups
-  a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission)) 
-  // switch(itemCategory) {
-  //   case 'Chocolade':
-  //     a.appendChild(document.createTextNode("3.97"))
-  //     break;
-  //   default:
-  //     console.log(itemCategory)
-  //     break;
-  // }
+  a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission +"\n")) 
 
-  formatPopup(a);
+  formatPopup(a, "10px");
+
+  appendReview(a, "correct", info);
+  appendReview(a, "incorrect info", info);
+  appendReview(a, "missing in database", info);
+  appendReview(a, "not found in database", info);
 
   document.body.appendChild(a);
   document.body.style = "white-space: pre;"
 }
 
-function formatPopup(popup){
+function formatPopup(popup, pos){
   popup.style.width = "15%";
   popup.style.height = "10%";
   popup.style.position = "absolute";
   popup.style.top = "10px";
-  popup.style.left = "10px";
+  popup.style.left = pos;
   popup.style.backgroundColor = "lightblue";
   popup.style.zIndex = 9999999;
   popup.style.font = "italic bold 16px arial,serif";
+}
+
+
+function appendReview(parentDiv, result, info) {
+  let x = document.createElement("BUTTON");
+  let t = document.createTextNode(result);
+  x.appendChild(t);
+  x.addEventListener("click", function () {navigator.clipboard.writeText(info.replaceAll("\n", " ").replaceAll(/\s+/g, " ") + result + "\n");} );
+  parentDiv.appendChild(x);
 }
 
 function showC02Information(itemNames){
   fetch(chrome.runtime.getURL('../data/database_nl.csv'))
       .then((response) => response.text())
       .then((text) => findCarbonInfo(csvToArray(text, ";"), itemNames))
-      .then((data) => createPopup(data.name, data.carbon));
+      .then((data) => createPopup(data.name, data.carbon, data.info));
 }
 
 function csvToArray(str, delimiter = ",") {
@@ -101,6 +158,15 @@ function csvToArray(str, delimiter = ",") {
   return arr;
 }
 
+function getItemInfo(databaseName){
+  const breadcrumbTrailItemList = document.getElementsByClassName("breadcrumb-trail").item(0).childNodes;
+  let retString = window.location.href + ", " + databaseName.replaceAll(",", "/") + ", ";
+  for (i = 0; i < breadcrumbTrailItemList.length; i++) {
+    retString += breadcrumbTrailItemList.item(i).childNodes.item(0).textContent + "/";
+  }
+  return retString + ", ";
+}
+
 function findCarbonInfo(data, itemNames) { 
   let ret;
   console.log("Looking for group: " + itemNames);
@@ -108,11 +174,13 @@ function findCarbonInfo(data, itemNames) {
     for (var i in data) {
       // console.log("Product " + data[i].name + " has " + data[i].carbon + "kg of CO2 equivalent");
       for(const itemName of itemNames[itemTypeIndex]) {
-        if (data[i].name.includes(itemName)) {
-          console.log("WOOOOO Found it! " + itemName +  " within: " + data[i].name);
+        if (data[i].name.toLowerCase().includes(itemName.toLowerCase())) {
+        // if (data[i].name.includes(itemName)) {
+          console.log("WOOOOO Found it! '" + itemName +  "' within: " + data[i].name);
           if (!ret) ret = {
             'name' : data[i].name, 
-            'carbon' : data[i].carbon
+            'carbon' : data[i].carbon,
+            'info' : getItemInfo(data[i].name)
           };
         }
       }
@@ -121,6 +189,7 @@ function findCarbonInfo(data, itemNames) {
   if (ret) return ret;
   return {
     'name' : "food group not found", 
-    'carbon' : 0
+    'carbon' : 0,
+    'info' : getItemInfo("not found")
   };
 }
