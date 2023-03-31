@@ -37,10 +37,10 @@ function sanitizeArray(s){
 function createPopup(name, carbonEmmission){
   a = document.createElement("DIV");
   // const itemCategory = breadcrumbTrailItemList.item(1).childNodes.item(0).textContent.replace(/\s/g, '');
-  a.appendChild(document.createTextNode("Food Group: \n" + name +"\n\n"));
+ // a.appendChild(document.createTextNode("Food Group: \n" + name +"\n\n"));
 
   // Simple switch statement to check for food groups
-  a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission)) 
+  //a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission)) 
   // switch(itemCategory) {
   //   case 'Chocolade':
   //     a.appendChild(document.createTextNode("3.97"))
@@ -49,23 +49,64 @@ function createPopup(name, carbonEmmission){
   //     console.log(itemCategory)
   //     break;
   // }
+  b = document.createElement("DIV");
+  formatPopup(a,b,carbonEmmission);
 
-  formatPopup(a);
 
+  // Add overlaying item
+
+  
+
+
+  
+  a.appendChild(b)
   document.body.appendChild(a);
   document.body.style = "white-space: pre;"
 }
 
-function formatPopup(popup){
-  popup.style.width = "15%";
-  popup.style.height = "10%";
+function formatPopup(popup, overlay, carbonEmmission){
+  const img = document.createElement("img");
+  img.src = chrome.runtime.getURL("./Label1.png");
+  popup.appendChild(img);
+  img.style.height = "99%";
+
+  popup.style.height = "20%";
   popup.style.position = "absolute";
-  popup.style.top = "10px";
-  popup.style.left = "10px";
-  popup.style.backgroundColor = "lightblue";
+  popup.style.top = "600px";
+  popup.style.right = "150px";
   popup.style.zIndex = 9999999;
   popup.style.font = "italic bold 16px arial,serif";
+
+
+  overlay.appendChild(document.createTextNode("\n"+carbonEmmission+ "g")) 
+
+  overlay.style.backgroundColor = "lightblue";
+  overlay.style.font = "italic bold 12px arial,serif"
+  overlay.style.zIndex = 9999999;
+  overlay.style.position = "absolute";
+  overlay.style.width = "40px";
+  overlay.style.height = "40px";
+  overlay.style.borderRadius = "100px";
+  overlay.style.borderStyle = "solid"
+  overlay.style.textAlign = "center";
+  if (carbonEmmission < 200) {
+    overlay.style.right = "130px";
+    overlay.style.top = "60px";
+  } else if (carbonEmmission < 600) {
+    overlay.style.right = "105px";
+    overlay.style.top = "25px";
+  } else if (carbonEmmission < 800) {
+    overlay.style.right = "65px";
+    overlay.style.top = "12px";
+  } else if (carbonEmmission < 1200) {
+    overlay.style.right = "21px";
+    overlay.style.top = "25px";
+  } else {
+    overlay.style.right = "6px";
+    overlay.style.top = "60px";
+  }
 }
+
 
 function showC02Information(itemNames){
   fetch(chrome.runtime.getURL('../data/database_nl.csv'))
