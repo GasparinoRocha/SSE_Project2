@@ -53,7 +53,7 @@ function createPopup(name, carbonEmmission){
 
 function formatPopup(popup, overlay, carbonEmmission){
   const img = document.createElement("img");
-  img.src = chrome.runtime.getURL("./Label1.png");
+  img.src = chrome.runtime.getURL("./images/Label1.png");
   popup.appendChild(img);
   img.style.height = "99%";
 
@@ -77,20 +77,20 @@ function formatPopup(popup, overlay, carbonEmmission){
   overlay.style.borderStyle = "solid"
   overlay.style.textAlign = "center";
   if (carbonEmmission < 200) {
-    overlay.style.right = "130px";
-    overlay.style.top = "60px";
+    overlay.style.right = "145px";
+    overlay.style.top = "72px";
   } else if (carbonEmmission < 600) {
-    overlay.style.right = "105px";
-    overlay.style.top = "25px";
+    overlay.style.right = "125px";
+    overlay.style.top = "32px";
   } else if (carbonEmmission < 800) {
-    overlay.style.right = "65px";
-    overlay.style.top = "12px";
+    overlay.style.right = "75px";
+    overlay.style.top = "15px";
   } else if (carbonEmmission < 1200) {
-    overlay.style.right = "21px";
-    overlay.style.top = "25px";
+    overlay.style.right = "25px";
+    overlay.style.top = "30px";
   } else {
-    overlay.style.right = "6px";
-    overlay.style.top = "60px";
+    overlay.style.right = "10px";
+    overlay.style.top = "72px";
   }
 }
 
