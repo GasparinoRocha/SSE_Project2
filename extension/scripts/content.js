@@ -31,7 +31,9 @@ function stringToArray(string){
 }
 
 function sanitizeArray(s){
-  return ((s) && (s != "en") && (isNaN(s)))
+  s = s.toLowerCase();
+  const forbiddenWords = ["rode", "saus", "ster", "groen", "water", "voor", "alle", "droog"]
+  return ((s) && (s.length > 3) && (isNaN(s)) && !forbiddenWords.includes(s)) 
 }
 
 function createPopup(name, carbonEmmission){
@@ -39,25 +41,10 @@ function createPopup(name, carbonEmmission){
   // const itemCategory = breadcrumbTrailItemList.item(1).childNodes.item(0).textContent.replace(/\s/g, '');
  // a.appendChild(document.createTextNode("Food Group: \n" + name +"\n\n"));
 
-  // Simple switch statement to check for food groups
-  //a.appendChild(document.createTextNode("Total CO2: " + carbonEmmission)) 
-  // switch(itemCategory) {
-  //   case 'Chocolade':
-  //     a.appendChild(document.createTextNode("3.97"))
-  //     break;
-  //   default:
-  //     console.log(itemCategory)
-  //     break;
-  // }
   b = document.createElement("DIV");
   formatPopup(a,b,carbonEmmission);
 
-
   // Add overlaying item
-
-  
-
-
   
   a.appendChild(b)
   document.body.appendChild(a);
@@ -149,7 +136,7 @@ function findCarbonInfo(data, itemNames) {
     for (var i in data) {
       // console.log("Product " + data[i].name + " has " + data[i].carbon + "kg of CO2 equivalent");
       for(const itemName of itemNames[itemTypeIndex]) {
-        if (data[i].name.includes(itemName)) {
+        if (data[i].name.toLowerCase().includes(itemName.toLowerCase())) {
           console.log("WOOOOO Found it! " + itemName +  " within: " + data[i].name);
           if (!ret) ret = {
             'name' : data[i].name, 
