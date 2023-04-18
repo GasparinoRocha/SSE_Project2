@@ -32,7 +32,7 @@ function stringToArray(string){
 
 function sanitizeArray(s){
   s = s.toLowerCase();
-  const forbiddenWords = ["rode", "saus", "ster", "groen", "water", "voor", "alle", "droog"]
+  const forbiddenWords = ["rode", "rood", "saus", "ster", "groen", "water", "voor", "alle", "droog"]
   return ((s) && (s.length > 3) && (isNaN(s)) && !forbiddenWords.includes(s)) 
 }
 
